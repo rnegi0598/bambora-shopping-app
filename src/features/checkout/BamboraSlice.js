@@ -58,7 +58,7 @@ export const makePayment = createAsyncThunk(
       Authorization:process.env.REACT_APP_PAYMENT_PASSCODE,
     };
     const data = {
-      amount:123.00,
+      amount:Number(amount).toFixed(2),
       payment_method: "token",
       billing,
       token: {
