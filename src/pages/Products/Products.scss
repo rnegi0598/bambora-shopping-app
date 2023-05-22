@@ -1,0 +1,44 @@
+.products {
+    padding: 30px 10px;
+    display: flex;
+    background-color: #E8E8E8;
+    
+  
+    .left {
+      flex: 1;
+      position: sticky;
+      height: 100%;
+      top: 50px;
+      padding-left: 10px;
+      // background-color: #D8D8D8;
+  
+      .filterItem{
+        margin-bottom: 30px;
+  
+        h2{
+          font-weight: 400;
+          margin-bottom: 20px;
+        }
+  
+        .inputItem{
+          margin-bottom: 10px;
+          label{
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+    
+    .right {
+      flex: 3;
+  
+      .catImg{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        margin-bottom: 50px;
+       
+      }
+    }
+  }
+  

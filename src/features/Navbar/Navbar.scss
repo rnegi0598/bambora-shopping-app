@@ -1,0 +1,81 @@
+.navbar {
+  height: 80px;
+  background-color: #d8d8d8;
+
+  .wrapper {
+    height: 100%;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .item {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      img {
+        width: 30px;
+        height: 20px;
+      }
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
+    }
+    .center {
+      font-size: 30px;
+      letter-spacing: 2px;
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      @media screen and (max-width: 900px) {
+        .item {
+          display: none;
+        }
+      }
+      .icons {
+        display: flex;
+        gap: 15px;
+        color: #777;
+        cursor: pointer;
+
+        .cartIcon {
+          position: relative;
+
+          span {
+            font-size: 12px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #2879fe;
+            color: white;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+// checkout nav
+.checkout-nav {
+  font-size: 1.5rem;
+  .checkout {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+  }
+}
