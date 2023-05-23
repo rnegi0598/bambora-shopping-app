@@ -34,38 +34,44 @@ const Checkout = () => {
         <h3>Billing details</h3>
           <p>
             <label>
-              <span>Street Address</span>
               <input type="text" value={street} onChange={(e)=>{setStreet(e.target.value)}} required/>
+              <span>Street Address</span>
+
             </label>
           </p>
           <p>
             <label>
-              <span>City</span>
               <input type="text" value={city} onChange={(e)=>{setCity(e.target.value)}} required />
+              <span>City</span>
+
             </label>
           </p>
           <p>
             <label>
-              <span>Province</span>
               <input type="text" value={province} onChange={(e)=>{setProvince(e.target.value)}} required />
+              <span>Province</span>
+
             </label>
           </p>
           <p>
             <label>
-              <span>Country</span>
               <input type="text" value={country} onChange={(e)=>{setCountry(e.target.value)}} required />
+              <span>Country</span>
+
             </label>
           </p>
           <p>
             <label>
-              <span>Postal Code</span>
               <input type="text" value={postalCode} onChange={(e)=>{setPostalCode(e.target.value)}} required />
+              <span>Postal Code</span>
+
             </label>
           </p>
           <p>
             <label>
-              <span>Phone Number</span>
               <input type="text" value={phoneNumber} onChange={(e)=>{setPhoneNumber(e.target.value)}} required />
+              <span>Phone Number</span>
+
             </label>
           </p>
         </div>

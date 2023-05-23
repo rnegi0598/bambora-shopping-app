@@ -36,7 +36,7 @@
       align-items: center;
       gap: 25px;
 
-      @media screen and (max-width: 900px) {
+      @media screen and (max-width: 1150px) {
         .item {
           display: none;
         }
@@ -72,6 +72,8 @@
 
 // checkout nav
 .checkout-nav {
+  background-color: #202020;
+  color: white;
   font-size: 1.5rem;
   .checkout {
     font-size: 2rem;

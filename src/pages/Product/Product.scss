@@ -3,6 +3,7 @@
     display: flex;
     gap: 50px;
     background-color: #E8E8E8;
+    background-color: white;
     @media screen  and (max-width:900px){
       flex-direction: column;
     }

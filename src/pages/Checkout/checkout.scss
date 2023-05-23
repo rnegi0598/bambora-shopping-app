@@ -6,70 +6,107 @@
     gap: 50px;
     align-items: flex-start;
     padding: 20px 10px;
-    background-color: #F0F0F0;
-    .left {
-        background-color: #DCDCDC;
-        // border: 1px solid black;
-        padding: 20px;
+    @media screen and (max-width:700px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        .left{
+            width: 80%;
+        }
+        .right{
+            width: 80%;
+        }
 
-        h3{
+    }
+    .left {
+       
+        padding: 20px;
+       
+
+        h3 {
             letter-spacing: 2px;
             text-transform: uppercase;
+            padding-bottom: 10px;
+            border-bottom: 2.5px solid white;
         }
         .address {
-            // border: 1px solid gray;
             padding: 15px;
             margin-bottom: 10px;
             background-color: #f0f0f0;
+           
             label {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                // border: 1px solid black;
+                flex-direction: row-reverse;
 
                 span {
                     margin-right: 10px;
+                    display: inline-block;
+                    width: 150px;
+                    height: 25px;
+                    padding: 7px;
+                    transition: all 500ms ease-in;
+                    font-weight: 500;
+                    text-transform: uppercase;
                 }
             }
             input {
                 width: 200px;
                 height: 25px;
                 outline: none;
-                padding: 5px;
+                padding: 5px 10px;
+                letter-spacing: 2px;
+                background-color: white;
+                border: 1px solid white;
+                transition: all 500ms ease-in;
+                &:focus {
+                    border: 1px solid white;
+                    background-color: #202020;
+                    color: white;
+                }
+                &:focus + span {
+                    background-color: #202020;
+                    color: white;
+                }
             }
         }
-        .payment-option{
+        .payment-option {
             background-color: #f0f0f0;
             padding: 15px;
+            margin-bottom: 500px;
+           
         }
-
-       
     }
-    .right{
-        padding: 10px;
-        background-color: #DCDCDC;
-        .order-summary{
+    .right {
+        padding: 20px;
+        .order-summary {
             background-color: #f0f0f0;
-            padding: 10px;
+            padding: 20px;
+            background-color: #202020;
+            color: white;
         }
 
-        h4{
+        h4 {
+            margin-bottom: 0;
+            text-align: center;
             font-weight: 400;
             font-size: 1.5rem;
             padding-bottom: 10px;
-            border-bottom: 1px solid black ;
+            border-bottom: 2.5px solid white;
         }
-        p{
+        p {
             display: flex;
             justify-content: space-between;
+            padding: 0 10px;
+            gap: 15px;
         }
-       
-        .total-cost{
-            padding-top: 10px;
-            border-top: 1px solid black;
+
+        .total-cost {
+            padding: 10px;
+            border-top: 2px solid white;
             font-weight: 500;
         }
-        .dollar{
+        .dollar {
             font-weight: 500;
         }
     }

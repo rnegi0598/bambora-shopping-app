@@ -36,7 +36,7 @@ const Cart = ({setOpen,setIsCheckout}) => {
             <h1>{item.title}</h1>
             <p>{item.description?.substring(0, 100)}</p>
             <div className="price">
-              {item.qty} x Rs {item.price}
+              {item.qty} x $ {item.price}
             </div>
           </div>
           <DeleteOutlinedIcon
@@ -50,7 +50,7 @@ const Cart = ({setOpen,setIsCheckout}) => {
       ))}
       <div className="total">
         <span>SUBTOTAL</span>
-        <span>Rs {totalPrice()}</span>
+        <span>$ {totalPrice()}</span>
       </div>
       <button onClick={checkoutHandler}>PROCEED TO CHECKOUT</button>
       <span
