@@ -1,7 +1,9 @@
 # E-Commerce Website
-This is an e-commerce website built using ReactJS as the front-end framework and [My JSON Server](https://my-json-server.typicode.com/) as the back-end server. The website allows users to browse through products, add products to their cart, delete products from their cart and reset the cart .Use [Bambora Payment Api's](https://dev.na.bambora.com/docs/references/payment_APIs/) for making payments.
+This is an e-commerce website built using ReactJS as the front-end framework and [My JSON Server](https://my-json-server.typicode.com/) as the back-end server. The website allows users to browse through products, add products to their cart, delete products from their cart and reset the cart .Use [Bambora Payment Api's](https://dev.na.bambora.com/docs/references/payment_APIs/) for making payments.  
 
-[app preview](https://github.com/rnegi0598/bambora-shopping-app/assets/45715802/0aa8793e-520d-434c-882d-8f6fe2a41933)
+[App Deployment Link](https://bambora-shopping-app.vercel.app/) 
+
+https://github.com/rnegi0598/bambora-shopping-app/assets/45715802/0aa8793e-520d-434c-882d-8f6fe2a41933
 
 
 
