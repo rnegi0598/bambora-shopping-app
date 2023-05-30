@@ -1,17 +1,17 @@
 import "./customCheckout.css";
-import { useEffect, useState,useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
-import { createProfile,makePayment } from "./BamboraSlice";
-import { resetCart } from "../Products/productsSlice"; 
-export const CustomCheckout = ({billing,orderTotal}) => {
+import { createProfile, makePayment } from "./BamboraSlice";
+import { resetCart } from "../Products/productsSlice";
+export const CustomCheckout = ({ billing, orderTotal }) => {
   const dispatch = useDispatch();
-  const countInputClick=useRef(0);
-  const [token,setToken]=useState(null);
+  const countInputClick = useRef(0);  //used to check if user saved card(countInputClick=0) or made payment(countInputClick=1)
+  const [token, setToken] = useState(null);
   // const profileStatus=useSelector(state=>state.bambora.profileStatus)
   // const paymentStatus=useSelector(state=>state.bambora.paymentStatus)
   useEffect(() => {
-    //
+    //on Submit customCheckoutFunc will setToken
     const customCheckoutFunc = function () {
       var customCheckout = window.customcheckout();
 
@@ -236,34 +236,41 @@ export const CustomCheckout = ({billing,orderTotal}) => {
 
       customCheckoutController.init();
     };
-    if(window.count===0){
+    if (window.count === 0) {
       customCheckoutFunc();
     }
     //
   }, []);
 
-  
-  useEffect(()=>{
-    if(token){
+  useEffect(() => {
+    if (token) {
       console.log(countInputClick.current);
-      if(countInputClick.current===0){
-        dispatch(createProfile({token,billing}));
-        toast.success('Card profile saved successfully',{ autoClose: 2000 ,position: "bottom-right",theme: "dark"});
-      }else if(countInputClick.current===1){
-        dispatch(makePayment({token,billing,amount:Number(orderTotal)}));
+      //save card
+      if (countInputClick.current === 0) {
+        dispatch(createProfile({ token, billing }));
+        toast.success("Card profile saved successfully", {
+          autoClose: 2000,
+          position: "bottom-right",
+          theme: "dark",
+        });
+      } else if (countInputClick.current === 1) {
+        dispatch(makePayment({ token, billing, amount: Number(orderTotal) }));
         dispatch(resetCart());
-        toast.success('Payment done successfully',{ autoClose: 2000 ,position: "bottom-right",theme: "dark"});
+        toast.success("Payment done successfully", {
+          autoClose: 2000,
+          position: "bottom-right",
+          theme: "dark",
+        });
       }
-      
+
       countInputClick.current++;
     }
-  },[token,billing,orderTotal,dispatch]);
-
+  }, [token, billing, orderTotal, dispatch]);
 
   return (
     <>
       <div className="container">
-        <form id="checkout-form" >
+        <form id="checkout-form">
           <div id="card-number"></div>
           <label htmlFor="card-number" id="card-number-error"></label>
 
@@ -277,16 +284,14 @@ export const CustomCheckout = ({billing,orderTotal}) => {
             id="pay-button"
             type="submit"
             className="btn disabled"
-            value={token?"Pay":"Save"}
+            value={token ? "Pay" : "Save"}
+            title={token ? "Make Payment" : "Save Card"}
             disabled={true}
-           
           />
-         
 
           <div id="feedback"></div>
         </form>
       </div>
-      
     </>
   );
 };

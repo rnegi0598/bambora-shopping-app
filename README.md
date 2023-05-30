@@ -1,6 +1,6 @@
 # E-Commerce Website
-This is an e-commerce website built using ReactJS as the front-end framework and [My JSON Server](https://my-json-server.typicode.com/) as the back-end server. The website allows users to browse through products, add products to their cart, delete products from their cart and reset the cart .  
-[Website Deployment Link](https://shopping-1booi126x-rnegi0598.vercel.app/)
+This is an e-commerce website built using ReactJS as the front-end framework and [My JSON Server](https://my-json-server.typicode.com/) as the back-end server. The website allows users to browse through products, add products to their cart, delete products from their cart and reset the cart .Use [Bambora Payment Api's](https://dev.na.bambora.com/docs/references/payment_APIs/) for making payments.
+[Website Deployment Link]()
 
 ## Screenshots
 ### Home Page
@@ -21,7 +21,10 @@ This is an e-commerce website built using ReactJS as the front-end framework and
 - Product Details Page - Displaying the details of a selected product and allowing the user to add it to their cart.
 - Products Page - Displays the products belonging to the category cliked by the user.
 - Cart Page - Displaying the items added to the cart, allowing the user to modify or remove them, and providing a checkout button.
-
+- Checkout Page - Integrated the shopping cart with the Bambora Payment gateway APIs.
+- Used the [custom checkout javascript library](https://dev.na.bambora.com/docs/guides/custom_checkout) to generate the single-use token, which shall further be used to perform the following operations:  
+    - Generate a Payment Profile (POST to v1/Profile endpoint)
+    - Process a charge against a card (POST to v1/Payments endpoint)
 ## Technologies Used
 - ReactJS
 - [Redux Toolkit](https://redux-toolkit.js.org/) for state management

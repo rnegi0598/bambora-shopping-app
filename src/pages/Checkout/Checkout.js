@@ -11,8 +11,8 @@ const Checkout = () => {
     const [postalCode,setPostalCode]=useState('10001');
     const [phoneNumber,setPhoneNumber]=useState('8098098323');
 
-    const products = useSelector((state) => state.products.cart);
-    const shipping=50;
+    const products = useSelector((state) => state.products.cart); //products in cart
+    const shipping=50; //shipping price
     const totalPrice = (() => {
       let total = 0;
       products.forEach((item) => {
@@ -101,11 +101,11 @@ const Checkout = () => {
           </p>
           <p className="delivery-cost">
             <span>Shipping </span>
-            <span><span className="dollar">$ </span>{shipping}</span>
+            <span><span className="dollar">$ </span>{Math.floor(totalPrice)?shipping:"0"}</span>
           </p>
           <p className="total-cost">
             <span>Order Total </span>
-            <span><span className="dollar">$ </span>{orderTotal}</span>
+            <span><span className="dollar">$ </span>{Math.floor(totalPrice)?orderTotal:"0"}</span>
           </p>
         </div>
       </div>
