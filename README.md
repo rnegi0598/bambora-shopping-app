@@ -1,8 +1,11 @@
 # E-Commerce Website
 This is an e-commerce website built using ReactJS as the front-end framework and [My JSON Server](https://my-json-server.typicode.com/) as the back-end server. The website allows users to browse through products, add products to their cart, delete products from their cart and reset the cart .Use [Bambora Payment Api's](https://dev.na.bambora.com/docs/references/payment_APIs/) for making payments.
-[Website Deployment Link]()
 
-## Screenshots
+[app preview](https://github.com/rnegi0598/bambora-shopping-app/assets/45715802/0aa8793e-520d-434c-882d-8f6fe2a41933)
+
+
+<details>
+  # <summary>Screenshots</summary>
 ### Home Page
 ![Screenshot from 2023-03-14 15-31-01](https://user-images.githubusercontent.com/45715802/224968858-4eb9625b-6780-4d35-bcde-93f1d7cad6e3.png)
 ![Screenshot from 2023-03-14 15-31-13](https://user-images.githubusercontent.com/45715802/224968886-aa6ead64-9388-4955-ac10-4e31e23aa5a5.png)
@@ -12,7 +15,7 @@ This is an e-commerce website built using ReactJS as the front-end framework and
 ![Screenshot from 2023-03-14 15-32-56](https://user-images.githubusercontent.com/45715802/224968991-7c17d99f-a345-4b66-9834-ab9d6efeb9a2.png)
 ### Add To Cart
 ![Screenshot from 2023-03-14 15-33-31](https://user-images.githubusercontent.com/45715802/224969028-ed259e70-6ac5-47fd-b1bb-4069287b7270.png)
-
+</details>
 
 
 
@@ -40,7 +43,10 @@ This is an e-commerce website built using ReactJS as the front-end framework and
 
 
 ---
-## Getting Started with Create React App
+<details>
+    ## <summary>Getting Started with Create React App</summary>
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -110,3 +116,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</details>
